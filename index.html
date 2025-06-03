@@ -22,10 +22,10 @@
             <div class="empty"></div>
             <article>
                 <div class="title">
+                    <div class="void"></div>
                     <h1>Restful Media</h1>
                 </div>
                 <div class="description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </article>
         </section>
@@ -77,6 +77,7 @@
 
             let emptyElement = document.querySelector('.about .empty');
             let titleElement = document.querySelector('.about .title');
+            let voidElement = document.querySelector('.about .void');
             let figureElements = document.querySelectorAll('.service figure');
             
 
@@ -87,7 +88,10 @@
                 // console.log(event.clientX);
                 emptyElement.style.flexBasis = event.clientX + 'px';
                 titleElement.style.flexBasis = event.clientY / 2 + 'px';
-                
+               // voidElement.style.flexBasis = event.clientY / 2 + 'px';
+                voidElement.style.width = event.clientY / 2 + 'px';
+                voidElement.style.height = event.clientY / 2 + 'px';
+
                 figureElements.forEach( function( element ) {
                     element.style.flexBasis = window.innerWidth - event.clientX + 'px';
                 } );
