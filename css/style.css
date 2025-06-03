@@ -9,7 +9,7 @@ body {
     --pink: #d6a3fb;
     --green: #d0ff94;
     --grey: #e5e5e5;
-    --gutter: 3.125vw;
+    --gutter: 3.125vw 6.24vw;
 
     margin: 0;
     padding: 0;
@@ -20,7 +20,8 @@ body {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 70px;
+    line-height: 1em;
     margin: 0px;
 }
 
@@ -101,7 +102,7 @@ section.about article {
 }
 
 section.about article .title {
-    flex: 2;
+    flex: 1;
     display: flex;
     align-items: flex-end;
     background: var(--blue);
@@ -134,10 +135,11 @@ section.service figure {
     margin: 0;
     background: var(--green);
     border-radius: var(--border-radius);
+    max-width: 62.5vw;
 }
 
 section.service figure img {
-    width: 50%;
+    width: 40%;
 }
 
 section.service .text {
@@ -166,10 +168,10 @@ section.service.service-html figure img {
 
 @keyframes float {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(-5%);
     }
     100% {
-        transform: translateY(20px);
+        transform: translateY(5%);
     }
 }
 

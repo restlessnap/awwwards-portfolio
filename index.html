@@ -22,7 +22,7 @@
             <div class="empty"></div>
             <article>
                 <div class="title">
-                    <h1>Creative Developer</h1>
+                    <h1>Restful Media</h1>
                 </div>
                 <div class="description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -72,6 +72,29 @@
         <section id="contact" class="contact full-screen">
             <a href="mailto:hello@mail.com">hello@mail.com</a>
         </section>
+
+        <script>
+
+            let emptyElement = document.querySelector('.about .empty');
+            let titleElement = document.querySelector('.about .title');
+            let figureElements = document.querySelectorAll('.service figure');
+            
+
+
+            window.addEventListener( 'mousemove' , handleMouseMove);
+
+            function handleMouseMove ( event ) {
+                // console.log(event.clientX);
+                emptyElement.style.flexBasis = event.clientX + 'px';
+                titleElement.style.flexBasis = event.clientY / 2 + 'px';
+                
+                figureElements.forEach( function( element ) {
+                    element.style.flexBasis = window.innerWidth - event.clientX + 'px';
+                } );
+            }
+           
+
+        </script>
 
     </body>
 </html>
